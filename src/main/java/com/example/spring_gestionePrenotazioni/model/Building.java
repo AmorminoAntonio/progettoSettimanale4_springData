@@ -6,10 +6,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 
-@Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
+@Entity
 public class Building {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

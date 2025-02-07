@@ -1,4 +1,21 @@
 package com.example.spring_gestionePrenotazioni.runner;
 
-public class BuildingRunner {
+import com.example.spring_gestionePrenotazioni.model.Building;
+import com.example.spring_gestionePrenotazioni.service.BuildingService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
+@Component
+public class BuildingRunner implements CommandLineRunner {
+
+    @Autowired
+    BuildingService buildingService;
+
+    @Override
+    public void run(String... args) throws Exception {
+//        Building b = buildingService.createBuilding();
+//        System.out.println("elemento generato: " + b);
+//        buildingService.saveBuilding(b);
+    }
 }
