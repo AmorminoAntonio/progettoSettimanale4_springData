@@ -1,15 +1,14 @@
 package com.example.spring_gestionePrenotazioni.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 
+@Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
-@Entity
+@Getter
+@Setter
 public class Building {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,5 +25,15 @@ public class Building {
         this.name = name;
         this.address = address;
         this.city = city;
+    }
+
+    @Override
+    public String toString() {
+        return "Building{" +
+                "idBuilding=" + idBuilding +
+                ", name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                '}';
     }
 }

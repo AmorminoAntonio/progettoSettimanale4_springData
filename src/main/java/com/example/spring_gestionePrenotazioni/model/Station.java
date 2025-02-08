@@ -8,11 +8,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-
+@Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
-@Entity
+@Getter
+@Setter
 
 public class Station {
 
@@ -47,5 +47,17 @@ public class Station {
         this.maxPartecipants = maxPartecipants;
         this.buildingForEvent = buildingForEvent;
         this.isReservated = isReservated;
+    }
+
+    @Override
+    public String toString() {
+        return "Station{" +
+                "idStation=" + idStation +
+                ", description='" + description + '\'' +
+                ", stationType=" + stationType +
+                ", maxPartecipants=" + maxPartecipants +
+                ", buildingForEvent=" + buildingForEvent +
+                ", isReservated=" + isReservated +
+                '}';
     }
 }

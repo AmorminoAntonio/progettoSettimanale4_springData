@@ -14,7 +14,7 @@ public class StationRunner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Station s = stationService.createStation();
+        Station s = stationService.createStation2();
         stationService.saveStation(s);
     }
 }

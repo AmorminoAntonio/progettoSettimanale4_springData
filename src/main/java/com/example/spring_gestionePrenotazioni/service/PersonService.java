@@ -14,14 +14,28 @@ public class PersonService {
     PersonDAOrepository personDAOrepository;
 
     @Autowired
-    @Qualifier("person")
-    ObjectProvider<Person> personProvider;
+    @Qualifier("person1")
+    ObjectProvider<Person> person1Provider;
+    @Autowired
+    @Qualifier("person2")
+    ObjectProvider<Person> person2Provider;
+    @Autowired
+    @Qualifier("person3")
+    ObjectProvider<Person> person3Provider;
 
-    public Person createUser() {
-        return personProvider.getObject();
+    public Person createUser1() {
+        return person1Provider.getObject();
     }
 
-    public void savePerson(Person p){
+    public Person createUser2() {
+        return person1Provider.getObject();
+    }
+
+    public Person createUser3() {
+        return person1Provider.getObject();
+    }
+
+    public void savePerson(Person p) {
         personDAOrepository.save(p);
     }
 }

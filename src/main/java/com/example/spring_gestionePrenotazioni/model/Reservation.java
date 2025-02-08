@@ -1,16 +1,15 @@
 package com.example.spring_gestionePrenotazioni.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDate;
 
+@Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
-@Entity
+@Getter
+@Setter
 
 public class Reservation {
     @Id
@@ -32,5 +31,15 @@ public class Reservation {
         this.reservationDate = reservationDate;
         this.station = station;
         this.person = person;
+    }
+
+    @Override
+    public String toString() {
+        return "Reservation{" +
+                "idReservation=" + idReservation +
+                ", reservationDate=" + reservationDate +
+                ", station=" + station +
+                ", person=" + person +
+                '}';
     }
 }

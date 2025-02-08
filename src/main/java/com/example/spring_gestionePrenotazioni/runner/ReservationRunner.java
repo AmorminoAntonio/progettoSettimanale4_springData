@@ -16,7 +16,7 @@ public class ReservationRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 //        Reservation r = reservationService.createReservation();
-//        System.out.println("reservation creata: " + r);
 //        reservationService.saveReservation(r);
+//        System.out.println("reservation creata: " + r);
     }
 }

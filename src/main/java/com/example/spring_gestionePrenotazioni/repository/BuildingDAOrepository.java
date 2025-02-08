@@ -5,6 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface buildingDAOrepository extends JpaRepository<Building, Long> {
+public interface BuildingDAOrepository extends JpaRepository<Building, Long> {
     Building findById(long id);
 }

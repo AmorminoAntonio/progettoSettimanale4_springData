@@ -14,7 +14,8 @@ public class PersonRunner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        //Person p = personService.createUser();
-        //System.out.println("elemento generato: " + p);
+//        Person p = personService.createUser3();
+//        personService.savePerson(p);
+//        System.out.println("elemento generato e salvato: ");
     }
 }

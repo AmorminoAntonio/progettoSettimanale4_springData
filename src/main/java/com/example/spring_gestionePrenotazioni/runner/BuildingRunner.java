@@ -12,10 +12,11 @@ public class BuildingRunner implements CommandLineRunner {
     @Autowired
     BuildingService buildingService;
 
+
     @Override
     public void run(String... args) throws Exception {
-//        Building b = buildingService.createBuilding();
-//        System.out.println("elemento generato: " + b);
+//        Building b = buildingService.createBuilding3();
 //        buildingService.saveBuilding(b);
+//        System.out.println("elemento generato: ");
     }
 }

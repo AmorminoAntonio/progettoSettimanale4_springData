@@ -10,7 +10,8 @@ import java.util.List;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
+@Getter
+@Setter
 
 public class Person {
     @Id
@@ -34,5 +35,16 @@ public class Person {
         this.name = name;
         this.lastname = lastname;
         this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "idUser=" + idUser +
+                ", username='" + username + '\'' +
+                ", name='" + name + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 }
