@@ -15,8 +15,12 @@ public class BuildingRunner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-//        Building b = buildingService.createBuilding3();
-//        buildingService.saveBuilding(b);
+//        Building b1 = buildingService.createBuilding1();
+//        Building b2 = buildingService.createBuilding2();
+//        Building b3 = buildingService.createBuilding3();
+//        buildingService.saveBuilding(b1);
+//        buildingService.saveBuilding(b2);
+//        buildingService.saveBuilding(b3);
 //        System.out.println("elemento generato: ");
     }
 }

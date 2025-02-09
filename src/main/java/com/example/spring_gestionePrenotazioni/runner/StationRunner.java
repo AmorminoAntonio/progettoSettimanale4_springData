@@ -20,11 +20,13 @@ public class StationRunner implements CommandLineRunner {
     public void run(String... args) throws Exception {
 //        Station s = stationService.findStation(7);
 //        stationService.NotRiservatedList();
-       stationService.findStationByCityAndType(StationType.PRIVATO,"Borgo Giordano");
+
+        //stationService.findStationByCityAndType(StationType.PRIVATO, "Milano");
 
 
-
-       // stationService.saveStation(s);
+//        stationService.saveStation(stationService.createStation1());
+//        stationService.saveStation(stationService.createStation2());
+//        stationService.saveStation( stationService.createStation3());
 
     }
 }

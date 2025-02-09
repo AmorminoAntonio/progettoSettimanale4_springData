@@ -45,21 +45,37 @@ public class StationService {
         stationDAOrepository.save(s);
     }
 
-    public void NotRiservatedList() {
-        stationDAOrepository.findStationByReservationStatus(false);
-    }
 
     public Station findStation(long id) {
         return stationDAOrepository.findById(id);
     }
 
     public void findStationByCityAndType(StationType type, String city) {
-        if (type.equals(SALA_RIUNIONI) && city.equals("Quarto Oreste calabro") || type.equals(OPEN_SPACE) && city.equals("Rizzi salentino") || type.equals(PRIVATO) && city.equals("Borgo Giordano")) {
-            System.out.println("i risultati per tipo e città sono: ");
+        if ("Milano".equals(city) && (type.equals(SALA_RIUNIONI) || type.equals(OPEN_SPACE) || type.equals(PRIVATO))) {
             List<Station> lista = new ArrayList<>(stationDAOrepository.findStationsByTypeAndCity(type, city));
-            System.out.println(lista);
+            if (lista.isEmpty()) {
+                System.out.println("Nessuna postazione trovata per il tipo e la città specificata.");
+            } else {
+                System.out.println("Ecco a te la lista delle postazioni che hai ricercato per tipo di postazione e città: " + lista);
+            }
+        } else if ("Roma".equals(city) && (type.equals(SALA_RIUNIONI) || type.equals(OPEN_SPACE) || type.equals(PRIVATO))) {
+            List<Station> lista = new ArrayList<>(stationDAOrepository.findStationsByTypeAndCity(type, city));
+            if (lista.isEmpty()) {
+                System.out.println("Nessuna postazione trovata per il tipo e la città specificata.");
+            } else {
+                System.out.println("Ecco a te la lista delle postazioni che hai ricercato per tipo di postazione e città: " + lista);
+            }
+        } else if ("Torino".equals(city) && (type.equals(SALA_RIUNIONI) || type.equals(OPEN_SPACE) || type.equals(PRIVATO))) {
+            List<Station> lista = new ArrayList<>(stationDAOrepository.findStationsByTypeAndCity(type, city));
+            if (lista.isEmpty()) {
+                System.out.println("Nessuna postazione trovata per il tipo e la città specificata.");
+            } else {
+                System.out.println("Ecco a te la lista delle postazioni che hai ricercato per tipo di postazione e città: " + lista);
+            }
         } else {
-            System.out.println("nessun riscontro per questa città e tipo postazione.");
+            System.out.println("Nessun riscontro per questa città e tipo postazione.");
         }
     }
+
+
 }

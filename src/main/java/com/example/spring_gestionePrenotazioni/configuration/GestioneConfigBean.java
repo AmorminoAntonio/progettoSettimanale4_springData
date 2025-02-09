@@ -55,38 +55,38 @@ public class GestioneConfigBean {
     @Bean("building1")
     @Scope("prototype")
     public Building b1() {
-        return new Building(faker.company().name(), faker.address().fullAddress(), faker.address().city());
+        return new Building(faker.company().name(), faker.address().streetAddress(),"Torino");
     }
 
     @Bean("building2")
     @Scope("prototype")
     public Building b2() {
-        return new Building(faker.company().name(), faker.address().fullAddress(), faker.address().city());
+        return new Building(faker.company().name(), faker.address().streetAddress(),"Roma");
     }
 
     @Bean("building3")
     @Scope("prototype")
     public Building b3() {
-        return new Building(faker.company().name(), faker.address().fullAddress(), faker.address().city());
+        return new Building(faker.company().name(), faker.address().streetAddress(),"Milano");
     }
 
 
     @Bean("station1")
     @Scope("prototype")
     public Station s1() {
-        return new Station("riunione condominiale", StationType.SALA_RIUNIONI, 50, buildingDAOrepository.findById(1), true);
+        return new Station("riunione condominiale", StationType.SALA_RIUNIONI, 50, buildingDAOrepository.findById(6));
     }
 
     @Bean("station2")
     @Scope("prototype")
     public Station s2() {
-        return new Station("convento bel sudore", StationType.PRIVATO, 19, buildingDAOrepository.findById(2), true);
+        return new Station("convento bel sudore", StationType.PRIVATO, 19, buildingDAOrepository.findById(8));
     }
 
     @Bean("station3")
     @Scope("prototype")
     public Station s3() {
-        return new Station("sala del trono di chiappacani", StationType.OPEN_SPACE, 120, buildingDAOrepository.findById(3), false);
+        return new Station("sala del trono di chiappacani", StationType.OPEN_SPACE, 120, buildingDAOrepository.findById(7));
     }
 
 
