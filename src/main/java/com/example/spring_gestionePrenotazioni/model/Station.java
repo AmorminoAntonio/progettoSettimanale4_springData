@@ -34,8 +34,8 @@ public class Station {
     @JoinColumn(name = "building_id")
     private Building buildingForEvent;
 
-    @Column(nullable = false)
-    private boolean isReservated;
+    @Column(nullable = false,name = "is_riservated",columnDefinition = "boolean default false")
+    private boolean isRiservated;
 
     @OneToMany(mappedBy = "station")
     private List<Reservation> reservationListForStation = new ArrayList<>();
@@ -46,7 +46,7 @@ public class Station {
         this.stationType = stationType;
         this.maxPartecipants = maxPartecipants;
         this.buildingForEvent = buildingForEvent;
-        this.isReservated = isReservated;
+        this.isRiservated = isReservated;
     }
 
     @Override
@@ -57,7 +57,7 @@ public class Station {
                 ", stationType=" + stationType +
                 ", maxPartecipants=" + maxPartecipants +
                 ", buildingForEvent=" + buildingForEvent +
-                ", isReservated=" + isReservated +
+                ", isReservated=" + isRiservated +
                 '}';
     }
 }

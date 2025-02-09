@@ -90,11 +90,25 @@ public class GestioneConfigBean {
     }
 
 
-    @Bean
+    @Bean("reservation1")
     @Scope("prototype")
-    public Reservation reservation() {
+    public Reservation r1() {
         LocalDate reservationDate = LocalDate.of(2025, 2, 10);
-        return new Reservation(reservationDate, stationDAOrepository.findById(3), personDAOrepository.findById(1));
+        return new Reservation(reservationDate, stationDAOrepository.findById(8), personDAOrepository.findById(3));
+    }
+
+    @Bean("reservation2")
+    @Scope("prototype")
+    public Reservation r2() {
+        LocalDate reservationDate = LocalDate.of(2025, 1, 12);
+        return new Reservation(reservationDate, stationDAOrepository.findById(7), personDAOrepository.findById(2));
+    }
+
+    @Bean("reservation3")
+    @Scope("prototype")
+    public Reservation r3() {
+        LocalDate reservationDate = LocalDate.of(2025, 2, 22);
+        return new Reservation(reservationDate, stationDAOrepository.findById(9), personDAOrepository.findById(1));
     }
 
 }
